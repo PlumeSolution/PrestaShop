@@ -30,7 +30,7 @@ use PrestaShop\PrestaShop\Adapter\Hook\HookDispatcher;
 use PrestaShopBundle\Service\Hook\HookEvent;
 use PrestaShopBundle\Service\Hook\RenderingHookEvent;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
-use Symfony\Component\EventDispatcher\Event;
+use Symfony\Contracts\EventDispatcher\Event;
 
 class HookDispatcherTest extends KernelTestCase
 {
