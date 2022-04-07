@@ -14,7 +14,7 @@
         }
     ],
     "require": {
-        "php": ">=7.2.5",
+        "php": ">=7.4",
         "ext-curl": "*",
         "ext-dom": "*",
         "ext-fileinfo": "*",
@@ -130,7 +130,7 @@
         "symfony/polyfill-php74": "^1.10",
         "symfony/polyfill-php80": "^1.10",
         "symfony/polyfill-php81": "^1.10",
-        "symfony/property-access": "^5.0",
+        "symfony/property-access": "^5.4",
         "symfony/swiftmailer-bundle": "^3.1",
         "symfony/symfony": "^5.4",
         "tecnickcom/tcpdf": "^6.2.12",
@@ -144,9 +144,9 @@
         "johnkary/phpunit-speedtrap": "^3",
         "mikey179/vfsstream": "^1.6",
         "phpstan/phpstan": "^1",
-        "phpunit/phpunit": "~8.5.16",
+        "phpunit/phpunit": "~9.1.2",
         "prestashop/phpstan-prestashop": "^2.0",
-        "symfony/phpunit-bridge": "^3.4"
+        "symfony/phpunit-bridge": "^5.4"
     },
     "config": {
         "allow-plugins": {
@@ -155,7 +155,7 @@
             "ergebnis/composer-normalize": true
         },
         "platform": {
-            "php": "7.2.5"
+            "php": "7.4.0"
         },
         "sort-packages": true
     },
@@ -164,7 +164,7 @@
             "file": "app/config/parameters.yml"
         },
         "symfony": {
-            "require": "~4.4"
+            "require": "~5.4"
         },
         "symfony-app-dir": "app",
         "symfony-assets-install": "relative",
