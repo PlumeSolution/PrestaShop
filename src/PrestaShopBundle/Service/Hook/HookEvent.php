@@ -26,7 +26,7 @@
 
 namespace PrestaShopBundle\Service\Hook;
 
-use Symfony\Component\EventDispatcher\Event;
+use Symfony\Contracts\EventDispatcher\Event;
 
 /**
  * HookEvent is used in HookDispatcher.

@@ -32,9 +32,9 @@ use PrestaShop\PrestaShop\Core\Hook\HookInterface;
 use PrestaShop\PrestaShop\Core\Hook\RenderedHook;
 use PrestaShopBundle\Service\Hook\HookEvent;
 use PrestaShopBundle\Service\Hook\RenderingHookEvent;
-use Symfony\Component\EventDispatcher\Event;
 use Symfony\Component\EventDispatcher\EventDispatcher;
 use Symfony\Component\HttpFoundation\RequestStack;
+use Symfony\Contracts\EventDispatcher\Event;
 
 /**
  * This dispatcher is used to trigger hook listeners.
@@ -62,19 +62,20 @@ class HookDispatcher extends EventDispatcher implements HookDispatcherInterface
     public function __construct(RequestStack $requestStack = null)
     {
         $this->requestStack = $requestStack;
+        parent::__construct();
     }
 
     /**
      * This override will check if $event is an instance of HookEvent.
      *
-     * @param string|Hook $eventName
-     * @param Event|null $event
+     * @param string|Hook|null $eventName
+     * @param Event $event
      *
      * @return Event|HookEvent
      *
      * @throws \Exception if the Event is not HookEvent or a subclass
      */
-    public function dispatch($eventName, Event $event = null)
+    public function dispatch(object $event, $eventName = null): object
     {
         if ($event === null) {
             $event = new HookEvent($this->getHookEventContextParameters());

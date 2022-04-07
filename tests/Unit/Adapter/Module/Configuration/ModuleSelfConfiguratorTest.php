@@ -30,6 +30,8 @@ namespace Tests\Unit\Adapter\Module\Configuration;
 
 use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\Driver\PDOMySql\Driver;
+use Doctrine\DBAL\Driver\Result as DriverResult;
+use Doctrine\DBAL\Result;
 use Doctrine\DBAL\Statement;
 use PHPUnit\Framework\TestCase;
 use PrestaShop\PrestaShop\Adapter\Configuration;
@@ -367,7 +369,7 @@ class ConnectionMock extends Connection
         return true;
     }
 
-    public function prepare($statement)
+    public function prepare($statement): Statement
     {
         $this->sql[] = $statement;
 
@@ -377,13 +379,64 @@ class ConnectionMock extends Connection
 
 class StatementMock extends Statement
 {
+    private Connection $connection;
+
     /** @phpstan-ignore-next-line */
     public function __construct($sql, Connection $conn)
     {
+        $this->connection = $conn;
     }
 
-    public function execute($params = null)
+    public function execute($params = null): Result
     {
-        return true;
+        return new Result(new DriverResultMock(), $this->connection);
+    }
+}
+
+class DriverResultMock implements DriverResult
+{
+    public function fetchNumeric()
+    {
+        // TODO: Implement fetchNumeric() method.
+    }
+
+    public function fetchAssociative()
+    {
+        // TODO: Implement fetchAssociative() method.
+    }
+
+    public function fetchOne()
+    {
+        // TODO: Implement fetchOne() method.
+    }
+
+    public function fetchAllNumeric(): array
+    {
+        // TODO: Implement fetchAllNumeric() method.
+    }
+
+    public function fetchAllAssociative(): array
+    {
+        // TODO: Implement fetchAllAssociative() method.
+    }
+
+    public function fetchFirstColumn(): array
+    {
+        // TODO: Implement fetchFirstColumn() method.
+    }
+
+    public function rowCount(): int
+    {
+        // TODO: Implement rowCount() method.
+    }
+
+    public function columnCount(): int
+    {
+        // TODO: Implement columnCount() method.
+    }
+
+    public function free(): void
+    {
+        // TODO: Implement free() method.
     }
 }
