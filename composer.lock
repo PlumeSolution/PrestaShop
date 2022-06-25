@@ -4937,16 +4937,16 @@
         },
         {
             "name": "prestashop/blockwishlist",
-            "version": "v2.0.1",
+            "version": "v2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PrestaShop/blockwishlist.git",
-                "reference": "51d527730ce58aac136aac37f624592696be6f9d"
+                "reference": "a11c76e8cbf50622096c4411a3dc93ecba78cd03"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PrestaShop/blockwishlist/zipball/51d527730ce58aac136aac37f624592696be6f9d",
-                "reference": "51d527730ce58aac136aac37f624592696be6f9d",
+                "url": "https://api.github.com/repos/PrestaShop/blockwishlist/zipball/a11c76e8cbf50622096c4411a3dc93ecba78cd03",
+                "reference": "a11c76e8cbf50622096c4411a3dc93ecba78cd03",
                 "shasum": ""
             },
             "require-dev": {
@@ -4976,9 +4976,9 @@
             "description": "PrestaShop module blockwishlist",
             "homepage": "https://github.com/PrestaShop/blockwishlist",
             "support": {
-                "source": "https://github.com/PrestaShop/blockwishlist/tree/v2.0.1"
+                "source": "https://github.com/PrestaShop/blockwishlist/tree/v2.1.1"
             },
-            "time": "2021-05-27T15:29:15+00:00"
+            "time": "2022-06-24T08:16:27+00:00"
         },
         {
             "name": "prestashop/circuit-breaker",
@@ -12695,5 +12695,5 @@
     "platform-overrides": {
         "php": "7.2.5"
     },
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.3.0"
 }
