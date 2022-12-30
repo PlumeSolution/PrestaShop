@@ -85,7 +85,7 @@
     "html-webpack-plugin": "^5.5.0",
     "imports-loader": "^3.0.0",
     "mini-css-extract-plugin": "^1.6.0",
-    "mocha": "^6",
+    "mocha": "^10",
     "node-sass": "^6.0.1",
     "path": "^0.12.7",
     "postcss-loader": "^5.3.0",
